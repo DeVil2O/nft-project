@@ -26,7 +26,7 @@ const mintCollection = generateSigner(umi);
 const nft = createNft(umi, {
   name: "My NFT",
   symbol: "MNFT",
-  uri: "https://example.com/nft.json",
+  uri: "https://raw.githubusercontent.com/DeVil2O/nft-project/main/nft-metadata.json",
   mint: mintCollection,
   sellerFeeBasisPoints: percentAmount(0),
   isCollection: true,

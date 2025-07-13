@@ -1,5 +1,5 @@
 {
     "name": "My NFT",
     "description": "This is a test NFT",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/DeVil2O/nft-project/main/dog.png"
 }
