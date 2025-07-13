@@ -1,5 +1,5 @@
 import { createNft, fetchDigitalAsset, mplTokenMetadata } from "@metaplex-foundation/mpl-token-metadata";
-import { clusterApiUrl, Connection, LAMPORTS_PER_SOL, sendAndConfirmTransaction } from "@solana/web3.js";
+import { clusterApiUrl, Connection, Keypair, LAMPORTS_PER_SOL, sendAndConfirmTransaction } from "@solana/web3.js";
 import { airdropIfRequired, getKeypairFromFile } from "@solana-developers/helpers";
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import { generateSigner, keypairIdentity, percentAmount } from "@metaplex-foundation/umi";
@@ -7,7 +7,7 @@ import { generateSigner, keypairIdentity, percentAmount } from "@metaplex-founda
 
 const connection = new Connection(clusterApiUrl("devnet"));
 
-const user = await getKeypairFromFile();
+const user = Keypair.generate();
 
 await airdropIfRequired(connection, user.publicKey, 1 * LAMPORTS_PER_SOL, 0.5 * LAMPORTS_PER_SOL);
 
